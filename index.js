@@ -10,7 +10,7 @@ app.use(cors({
 app.use(bodyParser.json());
 
 let mongoClient=mongo.MongoClient;
-let url="mongodb+srv://vikram:viki2000@cluster0.6e3ep.mongodb.net/<dbname>?retryWrites=true&w=majority"
+let url=process.env.URL;
 
 app.get("/",async function(req,res){
     try{
